@@ -1,0 +1,63 @@
+﻿.article{
+	margin-top: 90px;
+    margin-left: 240px;
+    width: 65%;
+    margin-bottom: 40px;
+}
+.article .title{
+	padding-bottom:20px; 
+}
+
+.article .text{
+	padding: 5px 15px;
+	background-color: white;
+	font-size: 17px;
+	margin-bottom:30px; 
+}
+.article .text h2{
+	font-family: sans-serif;
+}
+
+
+.recomm_articles{
+	display: flex;
+    flex-wrap: wrap;
+    margin-left: 19%;
+    flex-direction: row;
+    width: 1000px;
+    padding-bottom: 50px;
+    padding-top: 5px; 
+}
+.recomm_articles .recomm_item{
+	width: 288px;
+    height: 200px;
+    margin: 7px 7px 7px 0px;
+    background-color: white;
+    padding: 6px;
+    border-radius: 5px;
+}
+.recomm_articles .recomm_item:hover{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+.recomm_articles .recomm_item a:hover{
+	color:red;
+}
+.recomm_articles .recomm_item img{
+    height: 75%;
+    width: 98%;
+}
+.recomm_articles .recomm_item_title{
+    padding-left: 10px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+
+
+/* H1 - загаловок в articles_index */
+.welcome_title{
+    margin-left: 240px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}

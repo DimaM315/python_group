@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %} {% endblock %} - Python group</title>
+
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="Python"/>
+
+	<link rel="shortcut icon" href="icon.png" />
+
+	<link rel="stylesheet" href="{% static 'css/pg_base.css' %}">
+	{% block style %} {% endblock %}
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+	<script src="https://kit.fontawesome.com/cb6129d936.js" crossorigin="anonymous"></script>	
+	
+	<script src="{% static 'js/pg_base.js' %}" defer></script>
+	{% block scripts %} {% endblock %}
+
+</head>
+<body>
+
+
+{% include 'inc/_header.html' %}
+	
+{% include 'inc/_sidebar.html' %}
+
+
+{% block content %} {% endblock %}
+
+</body>
+</html>	

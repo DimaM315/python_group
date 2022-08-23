@@ -1,0 +1,9 @@
+<div class="categories_block">
+{% for item in categories %}
+	<div class="categories_item">
+		<a href="{{ item.get_absolute_url }}" class="{% if item.title == page_title %} active {%endif%}" aria-current="true">
+			{{ item.title }}
+		</a>
+	</div>
+{% endfor %}
+</div>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load memes_watchCode %}
+
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+
+{% block style %} 
+	<link rel="stylesheet" href="{% static 'css/feed.css' %}">
+
+{% endblock %}
+
+
+{% block scripts %} 
+	<script src="{% static 'js/feed.js' %}" defer></script>
+
+{% endblock %}
+
+
+
+{% block content %}	
+	{% get_news_recomm %}
+
+	{% get_feed_content %}
+
+{% endblock %}

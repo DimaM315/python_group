@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load news_tags %}
+
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+{% block style %} 
+	<link rel="stylesheet" href="{% static 'css/news.css' %}">
+
+{% endblock %}
+
+
+{% block scripts %} 
+	<script src="{% static 'js/news.js' %}" defer></script>
+
+{% endblock %}
+
+
+
+{% block content %}
+	<div class="content">
+		{% get_popular_news_recomm %}	
+
+		{% get_all_categories page_title=title %}
+	</div>
+{% endblock %}
+
+
+

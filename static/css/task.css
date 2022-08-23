@@ -1,0 +1,65 @@
+.content_quize{
+	display: flex;
+    flex-wrap: wrap;
+
+    position: absolute;
+    top: 100px;
+    margin-left: 240px;
+    flex-direction: column;
+    width: calc(100% - 250px);
+}
+
+
+.content_quize .block_first{
+	max-width: 95%;
+	padding: 5px;
+	font-family: Arial;
+}
+
+.content_quize .block_first div{
+	max-width: 80%;
+	display:inline-block;
+	font-size: 13px;
+	float: left;
+	margin-bottom: 15px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.content_quize .block_first ul{
+	margin-left: 10px;
+	display:inline-block;
+}
+
+
+.content_quize .block-task{
+	margin-top: 25px;
+	width: 70%;
+	font-family: Arial;
+	margin-bottom: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.content_quize .block-task div{
+	margin-right: 10px;
+	margin-bottom: 5px;
+	flex-grow: 1;
+}
+
+.block-task .task-text, .block-task-solution{
+	width: 87%;
+}
+.block-task .task-text{
+	width: 100%;
+}
+
+.content_quize .block-task .btn{
+	display: inline-block;
+	width: 100px;
+}
+
+.content_quize .block-task .task-solution img{
+	margin-left: 20px;
+}

@@ -1,0 +1,25 @@
+<div class="sidebar">
+	<div class="logo"><a href="{% url 'feed_index' %}">Python group</a></div>
+	<div class="search"><input type="text" class="form-control" name="search" placeholder="Поиск..."></div>
+	
+	<a href="{% url 'news_index' %}">
+		<div class="item_category {% if title == 'Новости' %} current_page {%endif%}">
+		Новости</div>
+	</a>
+
+	<a href="{% url 'article_index' %}">
+		<div class="item_category {% if title == 'Статьи' %} current_page {%endif%}">
+		Статьи</div>
+	</a>
+
+	<a href="{% url 'tasks_index' %}">
+		<div class="item_category {% if title == 'Задачи' %} current_page {%endif%}">
+		Задачи</div>
+	</a>
+
+	<a href="#">
+		<div class="item_category">
+		Интересные факты</div>
+	</a>
+
+</div>

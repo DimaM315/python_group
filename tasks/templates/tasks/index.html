@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load tasks_tag %}
+
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+
+{% block style %} 
+	<link rel="stylesheet" href="{% static 'css/task.css' %}">
+
+{% endblock %}
+
+
+{% block scripts %} 
+	<script src="{% static 'js/task.js' %}" defer></script>
+
+{% endblock %}
+
+
+
+{% block content %}	
+	{% get_tasks_start tasks_level %}
+
+{% endblock %}

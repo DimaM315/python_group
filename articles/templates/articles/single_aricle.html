@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load popular_articles %}
+
+
+
+{% block title %}
+	Python group - {{ article.title }}
+{% endblock %}
+
+
+{% block style %} 
+	<link rel="stylesheet" href="{% static 'css/articles.css' %}">
+
+{% endblock %}
+
+
+{% block scripts %} 
+	<script src="{% static 'js/articles.js' %}" defer></script>
+
+{% endblock %}
+
+
+
+{% block content %}	
+	<div class="article">
+		
+		<h1 class="title">{{ article.title }}</h1>
+		
+		{% autoescape off %}
+			<div class="text">
+				{% if article.start_with_preview %}
+					<img src="{{ article.preview.url }}" width="350" height="200" style="float:left;margin-right:10px;">
+				{% endif %}
+				{{ article.text }}
+			</div>
+		{% endautoescape %}
+	</div>
+
+	{% get_popular_articles_recomm %}
+
+{% endblock %}

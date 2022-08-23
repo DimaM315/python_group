@@ -1,0 +1,10 @@
+<h3 style="margin-left:250px;">Популярные статьи</h3>
+	
+	<div class="recomm_articles">
+		{% for article in articles %}
+			<div class="recomm_item">
+				<img src="{{ article.preview.url }}" class="recomm_item_img">
+				<div class="recomm_item_title"><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></div>
+			</div>
+		{% endfor %}
+	</div>

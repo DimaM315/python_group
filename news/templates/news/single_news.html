@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load news_tags %}
+
+
+{% block title %}
+	Python group - {{ news.title }}
+{% endblock %}
+
+
+{% block style %} 
+	<link rel="stylesheet" href="{% static 'css/news.css' %}">
+
+{% endblock %}
+
+
+{% block scripts %} 
+	<script src="{% static 'js/news.js' %}" defer></script>
+
+{% endblock %}
+
+
+
+{% block content %}
+	<div class="content">
+		<div class="single_news">
+			<h1 class="title">{{ news.title }}</h1>
+			
+			{% autoescape off %}
+				<div class="text">
+					<img src="{{ news.photo.url }}" width="350" height="200" style="float:left;margin-right:10px;">
+					{{ news.text }}
+				</div>
+			{% endautoescape %}		
+		</div>
+
+		{% get_popular_news_recomm %}	
+	
+	</div>
+{% endblock %}

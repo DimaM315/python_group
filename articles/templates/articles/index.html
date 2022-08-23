@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load popular_articles %}
+
+
+{% block title %}
+	Python group - {{ title }}
+{% endblock %}
+
+
+{% block style %} 
+	<link rel="stylesheet" href="{% static 'css/articles.css' %}">
+
+{% endblock %}
+
+
+{% block scripts %} 
+	<script src="{% static 'js/articles.js' %}" defer></script>
+
+{% endblock %}
+
+
+{% block content %}	
+	
+	<h1 class="welcome_title">Статьи о языке Python, а так же IT и образовании.</h1>
+
+	{% get_popular_articles_recomm %}
+
+{% endblock %}

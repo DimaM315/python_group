@@ -1,0 +1,39 @@
+<div class="content_quize">
+	<div class="block_first">
+			<div>
+				<h1>Почему решать задачи важно?</h1>
+				<p style="font-style:italic; font-size: 15px;">Представленные задачи, за исключением некоторых, трудно представить в рабочих проектах. Однако, их аналоги, есть в каждом крупном проекте. Качественное решение абстрактных задач требует понимание работы языка программирование, а неправильно выбранный алгоритм или подход к решению, чреват снижением производительности и ухудшением качества кода. Любой разработчик должен владеть не только технологиями, но и уметь предоставить наиболее оптимальное и лаконичное решение проблемы.</p>
+			</div>
+			
+			<ul class="list-group">
+				<li class="list-group-item text-info">Уровни сложности:</li>
+				<li class="list-group-item {% if tasks_lvl == 1 %} active {% endif %}"><a href="{% url 'task_with_level' 1 %}">1 звезда</a></li>
+				<li class="list-group-item {% if tasks_lvl == 2 %} active {% endif %}"><a href="{% url 'task_with_level' 2 %}">2 звезды</a></li>
+				<li class="list-group-item {% if tasks_lvl == 3 %} active {% endif %}"><a href="{% url 'task_with_level' 3 %}">3 звезды</a></li>
+			</ul>
+	</div>
+		
+	{% autoescape off %}
+	{% for task in tasks %}
+		<div class="block-task">
+			<div class="task-text">
+				<h3>Задача №{{ task.id }}</h3>
+				<p>{{ task.text }}</p>
+			</div>
+			<div class="btn btn-primary">Стандартное решение</div> 
+			<div class="btn btn-success">Бест практис</div>
+				
+			<div class="block-task-solution">
+				<div class="block_code task-solution hidden">
+					{{ task.answer }}
+				</div>
+
+				<div class="block_code task-solution hidden">
+					{{ task.answer_better }}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+	{% endautoescape %}
+
+</div>

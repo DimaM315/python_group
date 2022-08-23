@@ -1,0 +1,30 @@
+<div class="content">
+
+	{% for mem_item, watch_code_item  in blocks_content %}
+		{% autoescape off %}
+		<div class="code_watch block">
+			<p class="text_code_watch">
+				<div class='block_code'>
+					{{ watch_code_item.question }}
+				</div>
+			</p>
+			<div class="btn btn-normal">Результат</div>
+			<div class="result_code_watch hidden"><br><hr>
+				{{ watch_code_item.answer }}
+			</div>
+		</div>
+		{% endautoescape %}
+
+		<div class="block_img block">
+			<img src="{{ mem_item.photo.url }}" alt="Pict" width="350" height="300"><br>
+			<div class="row">
+				<div>
+					{{ mem_item.text_on_photo }}
+					<text>Likes: 9</text>
+				</div>
+			</div>
+		</div>
+
+	{% endfor %}
+
+</div>

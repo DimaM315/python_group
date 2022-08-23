@@ -1,0 +1,11 @@
+<div class="recomm_news_block">
+	<h3>Популярные статьи</h3>
+	<div class="recomm_news">
+		{% for one_news in news %}
+			<div class="content_block">
+				<img src="{{ one_news.photo.url }}" class="content_block_img">
+				<div class="content_block_title"><a href="{{ one_news.get_absolute_url }}">{{ one_news.title }}</a></div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
